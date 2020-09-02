@@ -1,0 +1,750 @@
+//import font
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&display=swap');
+
+//Start Vars
+
+$darkGrey: #4E5266;
+$lightGrey: #575B72;
+$cyan: #4CABB1;
+$green: #69C7AD;
+$lightOrange: #FED586;
+$fontColor: #fff;
+
+//End Vars
+
+//Start Main Rules
+
+*
+{
+    font-family: 'Raleway', sans-serif;
+    transition: all .3s linear;
+}
+
+a
+{
+
+    &:hover
+    {
+        text-decoration: none;
+    }
+}
+
+//End Main Rules
+
+//Start Mixins
+
+@mixin button($backColor,$boxShadow,$hoverColor,$padding:.9em 7em)
+{
+    border-radius: 2em;
+    padding: $padding;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    background-color: $backColor;
+    box-shadow: $boxShadow;
+
+    &:hover
+    {
+        background-color: $hoverColor;
+    }
+}
+
+//End Mixins
+
+//Start NavBar
+
+nav
+{
+    padding: 4em 0 2.5em;
+    background-color: $darkGrey;
+
+    .row
+    {
+        align-items: center;
+    }
+    .brand-logo
+    {
+        vertical-align: top;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        a
+        {
+            font-size: 1.1em;
+            color: $fontColor;
+
+            &:hover
+            {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+
+        span
+        {
+            color: rgba(255, 255, 255, 0.5);
+            margin-left: 1em;
+            border-left: 1px solid rgba(255, 255, 255, 0.41);
+            padding-left: 1em;
+        }
+    }
+
+    .dropdown
+    {
+        vertical-align: top;
+        font-size: 0.9em;
+        cursor: pointer;
+        color: $fontColor;
+        font-weight: 500;
+        padding: .3em .7em;
+        letter-spacing: 1.2px;
+        &:hover
+        {
+            background-color: $lightGrey;
+            border-radius: 5px;
+        }
+        span
+        {
+            font-size: 1.3em;
+            margin-left: 0.4em;
+        }
+    }
+
+    @media (max-width: 767px)
+    {
+        padding: .5em;
+    }
+    @media (max-width: 991px)
+    {
+        padding: 1em;
+    }
+}
+
+//End NavBar
+
+//Start Menu
+
+aside.menu
+{
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $cyan;
+    color: rgba(214, 250, 255, 0.60);
+    height: 100%;
+    padding: 5em 2em;
+    font-weight: 300;
+
+    span
+    {
+        position: absolute;
+        top: 0;
+        right: 1em;
+        font-size: 2.5em;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover
+        {
+            color: #fff;
+        }
+    }
+    ul:nth-of-type(1)
+    {
+        margin-bottom: 2em;
+
+        li
+        {
+            padding-right: 12em;
+            margin-bottom: 2em;
+            padding-bottom: 1em;
+            position: relative;
+
+            a
+            {
+                color: rgba(214, 250, 255, 0.61);
+                text-decoration: none;
+
+                &:hover
+                {
+                    color: #fff;
+                }
+            }
+            &::after
+            {
+                content: '';
+                background-color: rgba(214, 250, 255, 0.30);
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    ul:nth-of-type(2)
+    {
+        li:nth-of-type(1)
+        {
+            margin-bottom: 3em;
+
+            a
+            {
+                @include button(rgba(74, 194, 200, 0.8), 0 0 20px 0px #00000026, rgba(78, 214, 220, 0.6));
+            }
+
+        }
+
+        li:nth-of-type(2)
+        {
+            a
+            {
+                @include button(transparent, none, rgba(255, 255, 255, 0.1));
+                border: 1px solid rgba(255, 255, 255, 0.31);
+            }
+        }
+    }
+}
+
+//End Menu
+
+//Start Header
+
+header
+{
+    background-color: $darkGrey;
+
+    .text
+    {
+        .col-lg-12
+        {
+            padding: 2.99em 2em;
+            color: #fff;
+
+            h3
+            {
+                font-size: 1.6em;
+                margin-bottom: 1em;
+                letter-spacing: 1.3px;
+            }
+
+            p
+            {
+                margin-bottom: 2em;
+                font-weight: 300;
+            }
+
+            &:nth-of-type(1)
+            {
+                background-color: $cyan;
+
+                p
+                {
+                    color: rgb(179, 217, 219);
+                }
+
+                a
+                {
+                    @include button(rgba(74, 194, 200, 0.8), 0 0 20px 0px #00000026, rgba(78, 214, 220, 0.6), 0.7em 2em);
+                }
+            }
+
+            &:nth-of-type(2)
+            {
+                background-color: $green;
+
+                p
+                {
+                    color: #dafae8;
+                }
+
+                a
+                {
+                    @include button(rgba(119, 221, 169, 0.6), 0 0 20px 0px #00000026, rgba(140, 239, 194, 0.6), 0.7em 2em);
+                }
+            }
+
+            @media (min-width: 1200px)
+            {
+                padding: 4.57em 2em;
+            }
+        }
+    }
+}
+
+//End Header
+
+//Start Section 1
+
+.sec1
+{
+    background-color: $lightGrey;
+    color: #000000bf;
+
+    .container
+    {
+        background-color: #fff;
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+
+    h2
+    {
+        font-size: 1.6em;
+        letter-spacing: 1.5px;
+        margin-bottom: 1em;
+    }
+    h3
+    {
+        font-size: 1em;
+        font-weight: 300;
+        color: #2e2c2c9e;
+        margin-bottom: 4em;
+    }
+
+    .col-lg-4
+    {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0 4em;
+
+        i
+        {
+            font-size: 1.5em;
+            width: 3.5em;
+            height: 3.5em;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            line-height: 3.5em;
+            margin-bottom: 1.5em;
+        }
+
+        &:nth-of-type(1)
+        {
+            i
+            {
+                color: $cyan;
+            }
+        }
+
+        &:nth-of-type(2)
+        {
+            i
+            {
+                color: $green;
+            }
+        }
+
+        &:nth-of-type(3)
+        {
+            i
+            {
+                color: $lightOrange;
+            }
+        }
+
+        h4
+        {
+            font-size: 1em;
+            margin-bottom: 1.5em;
+            color: #434b56;
+        }
+
+        p
+        {
+            color: #7a7a7ab8;
+            font-weight: 300;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 991px)
+        {
+            border-right: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 2em 0;
+        }
+    }
+}
+
+//End Section 1
+
+//Start Section 2
+
+.sec2
+{
+    background-color: $lightGrey;
+
+    .container
+    {
+        background-color: $lightOrange;
+        @media (min-width: 992px)
+        {
+            padding: 6em 10em 4em;
+        }
+    }
+
+    h2
+    {
+        font-size: 3em;
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: .7em;
+        font-style: italic;
+        letter-spacing: 3.5px;
+    }
+
+    hr
+    {
+        width: 4em;
+        height: 3px;
+        background-color: #FFF;
+        margin-bottom: 5em;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon
+    {
+        background-image: none;
+    }
+
+    .carousel-control-next, .carousel-control-prev
+    {
+        top: -27em;
+    }
+
+    @media(min-width: 768px)
+    {
+        .carousel-control-next, .carousel-control-prev
+        {
+            top: -20em;
+        }
+    }
+
+    @media(min-width: 992px)
+    {
+        .carousel-control-next, .carousel-control-prev
+        {
+            top: -15em;
+        }
+    }
+
+    @media(min-width: 1200px)
+    {
+        .carousel-control-next
+        {
+            right: -1em;
+        }
+
+        .carousel-control-prev
+        {
+            left: -1em;
+        }
+    }
+
+    .carousel-item
+    {
+        h3
+        {
+            color: #5f5f5f;
+            font-weight: 300;
+            font-size: 2em;
+            margin: 2em 0 1em;
+        }
+        p
+        {
+            margin: auto auto 2em;
+            color: #787878;
+        }
+        a
+        {
+            //@include button($darkPurple);
+            font-size: .8em;
+            margin-bottom: 3em;
+            display: inline-block;
+        }
+
+    }
+
+}
+
+//End Section 2
+
+//Start Section 3
+
+.sec3
+{
+    background-color: $lightGrey;
+
+    .container
+    {
+        background-color: #fff;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        @media (min-width: 992px)
+        {
+            padding: 4em 5em;
+        }
+    }
+
+    h2
+    {
+        font-size: 1.6em;
+        letter-spacing: 1.5px;
+        margin-bottom: 1em;
+    }
+    h3
+    {
+        font-size: 1em;
+        font-weight: 300;
+        color: #2e2c2c9e;
+        margin-bottom: 4em;
+    }
+
+    .row:nth-of-type(1)
+    {
+        box-shadow: 0 0 20px 4px #0000001f;
+
+        .col-lg-5
+        {
+            padding: 2em;
+            h5
+            {
+                font-size: 1.2em;
+                margin-bottom: 1em;
+            }
+
+            p
+            {
+                color: #4d4d4d9e;
+                font-weight: 300;
+                font-size: 0.9em;
+                margin-bottom: 2em;
+            }
+
+            a
+            {
+                @include button($lightGrey, none, #575B72, 0.7em 2em);
+            }
+        }
+
+        .col-lg-7
+        {
+            padding-right: 0;
+            padding-left: 0;
+            img
+            {
+                max-width: 100%
+            }
+        }
+    }
+
+    .row:nth-of-type(2)
+    {
+        box-shadow: 0 0 20px 4px #0000001f;
+        .col-lg-5
+        {
+            padding-left: 0;
+            padding-right: 0;
+            img
+            {
+                max-width: 100%;
+                max-height: 100%
+            }
+        }
+
+        .col-lg-7
+        {
+            padding: 1.8em;
+            h5
+            {
+                font-size: 1.2em;
+                margin-bottom: 1em;
+            }
+
+            p
+            {
+                color: #4d4d4d9e;
+                font-weight: 300;
+                font-size: 0.9em;
+                margin-bottom: 2em;
+            }
+
+            a
+            {
+                @include button($lightGrey, none, #575B72, 0.7em 2em);
+            }
+        }
+    }
+}
+
+//End Section 3
+
+//Start Section 4
+
+.sec4
+{
+    background-color: $darkGrey;
+    color: #fff;
+    .container
+    {
+        padding-top: 3em;
+        padding-bottom: 3em;
+        background-color: $cyan;
+    }
+
+    h2
+    {
+        font-size: 1.6em;
+        letter-spacing: 1.5px;
+        margin-bottom: 1em;
+    }
+    h3
+    {
+        font-size: 1em;
+        font-weight: 300;
+        color: #b3eaff;
+        margin-bottom: 4em;
+    }
+
+    .centring-container
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    form
+    {
+        input[type='email']
+        {
+            border-radius: 10em 0 0 10em;
+            height: 2.6em;
+            padding-right: 10em;
+        }
+
+        input[type='submit']
+        {
+            @include button(rgba(74, 194, 200, 0.8), 0 0 20px 0px #00000026, rgba(78, 214, 220, 0.6), 0.7em 2em);
+            border: 0;
+            border-radius: 0 10em 10em 0;
+        }
+
+        @media (max-width: 575px)
+        {
+            input[type='email']
+            {
+                padding-right: 0;
+                border-radius: 10em;
+                margin-bottom: 1em;
+            }
+
+            input[type='submit']
+            {
+                border-radius: 10em;
+            }
+        }
+    }
+}
+
+//End Section 4
+
+//Start Footer
+footer
+{
+    background-color: $darkGrey;
+    padding: 3em 0;
+
+    h3
+    {
+        font-size: 1.3em;
+        color: #fff;
+        margin-bottom: 1em;
+    }
+
+    .col-lg-3
+    {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 2em;
+        &:last-of-type
+        {
+            border-right: none;
+        }
+
+        @media (max-width: 767px)
+        {
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (min-width: 768px) and (max-width: 991px)
+        {
+            border-right: none;
+
+            &:nth-of-type(1)
+            {
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            &:nth-of-type(4)
+            {
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                margin-top: -0.3px;
+                margin-left: -1px;
+            }
+        }
+    }
+
+    .row
+    {
+        margin-bottom: 4em;
+        ul
+        {
+            margin-bottom: 2em;
+            li
+            {
+                margin-bottom: 1em;
+
+                a
+                {
+                    color: rgba(235, 235, 238, 0.81);
+                    font-weight: 300;
+                    font-size: 0.9em;
+
+                    &:hover
+                    {
+                        color: #fff;
+                        border-bottom: 1px dotted #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    ul.info
+    {
+        color: rgba(222, 222, 225, 0.8);
+        margin-bottom: 3em;
+        li
+        {
+            display: inline-block;
+            margin-right: 1.5em;
+            font-size: .9em;
+            font-weight: 300;
+
+            i
+            {
+                margin-right: 1em;
+            }
+        }
+    }
+
+    .rights
+    {
+        font-size: 0.9em;
+        color: #c9c9cca1;
+        font-weight: 300;
+    }
+}
+
+//End Footer

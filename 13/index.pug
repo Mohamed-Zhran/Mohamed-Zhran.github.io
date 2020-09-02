@@ -1,0 +1,199 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // for responsive mode
+    title Standard
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/all.min.css')
+    link(rel='stylesheet', href='css/style.css')
+    //if lt IE 9
+      script(src='js/html5shiv.min.js')
+      script(src='js/respond.min.js')
+  body
+    //-Start NavBar
+    nav
+      .container
+        .row
+          .brand-logo
+            a(href='#').text-uppercase altitude
+            span.text-uppercase.d-md-inline-block.d-none by MZ
+          .dropdown.ml-auto.text-uppercase menu #[span.d-inline-block &equiv;]
+    //-End NavBar
+    //-Start Menu
+    aside.menu
+      span &times;
+      ul.list-unstyled
+        each item in ["home","generic","elements"]
+          li.text-capitalize
+            a(href='#')=item
+      ul.list-unstyled
+        each item in ["sign up","log in"]
+          li.text-uppercase.text-center
+            a(href='#')=item
+
+    //-End Menu
+
+    //-Start Header
+    header.text-center
+      .container
+        .row
+          .col-lg-8.col-md-12.order-lg-1.order-0.header-slider
+            #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src='images/pic01.jpg' alt='First slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/pic02.jpg' alt='Second slide')
+                .carousel-item
+                  img.d-block.w-100(src='images/pic03.jpg' alt='Third slide')
+          .col-lg-4.col-md-12.order-lg-0.order-1.text
+            .row
+              .col-lg-12.col-md-6
+                h3 SED LOREM
+                p Sed egestas, ante vulputate volutpat vitae luctus metus libero aliquam
+                a(href='#').text-uppercase more
+              .col-lg-12.col-md-6
+                h3 AMET MAGNA
+                p Fusce lancinia ipsum feugiat dolor sed matis tempus sed nullam
+                a(href='#').text-uppercase more
+    //-End Header
+
+    //-Start Section 1
+    section.sec1.text-center
+      .container
+        h2 LOREM IPSUM DOLOR
+        h3 Sed egestas adipiscing
+        .row
+          .col-lg-4
+            i.fas.fa-camera.fa-2x
+            h4 ULTRICES ALIQUAM
+            p Lorem ipsum dolor sit amet nullam feugiat tempus
+          .col-lg-4
+            i.fas.fa-paper-plane.fa-2x
+            h4 LOREM SED NULLAM
+            p Lorem ipsum dolor sit amet nullam feugiat tempus
+          .col-lg-4
+            i.fas.fa-envelope.fa-2x
+            h4 ALIQUAM FEUGIAT
+            p Lorem ipsum dolor sit amet nullam feugiat tempus
+
+    //-End Section 1
+
+    //-Start Section 2
+    section.sec2.text-center
+      .container
+        #carouselExampleControls.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              .card
+                img.card-img-top(src='images/pic04.jpg', alt='Card image cap')
+                .card-body
+                  h3.card-title Magna libero faucibus adipiscing
+                  p.card-text
+                    | Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam pede semper est, vitae luctus metus libero #[br.d-lg-inline-block.d-none]
+                    | eu augue. Morbi purus sed libero, faucibus adipiscing, commodo quis, gravida lorem ipsum.
+            .carousel-item
+              .card
+                img.card-img-top(src='images/pic05.jpg', alt='Card image cap')
+                .card-body
+                  h3.card-title Feugiat lorem ipsum dolor amet
+                  p.card-text
+                    | Nullam pede semper est vitae luctus metus. Magna lorem ipsum libero eu adipiscing, commodo quis, gravida lorem #[br.d-lg-inline-block.d-none]
+                    | ipsum. Augue morbi purus sed libero, faucibus sed tempus aliquam lorem ipsum dolor amet.
+            .carousel-item
+              .card
+                img.card-img-top(src='images/pic06.jpg', alt='Card image cap')
+                .card-body
+                  h3.card-title Aliquam feugiat sed malesuada
+                  p.card-text
+                    | Sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed egestas, ante et vulputate #[br.d-lg-inline-block.d-none]
+                    | lorem ipsum dolor sit amet nullam. Adipiscing sed nullam tempus aliquam veroeros.
+          a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+              i.fas.fa-chevron-left.fa-3x
+            span.sr-only Previous
+          a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+              i.fas.fa-chevron-right.fa-3x
+            span.sr-only Next
+    //-End Section 2
+
+    //-Start Section 3
+    section.sec3.text-center
+      .container
+        h2 LOREM IPSUM DOLOR
+        h3 Sed egestas adipiscing
+        .row
+          .col-lg-5.order-lg-0.order-1
+            h5 ALIQUAM
+            p Morbi in sem quis dui placerat ellentesque odio nisi euismod in haretra a, ultricies in, diam ed rcuc consequat lorem ipsum dolor.
+            a(href='#').text-uppercase more
+          .col-lg-7.order-lg-1.order-0
+            img(src='images/pic07.jpg' alt='').w-100
+        .row
+          .col-lg-5
+            img(src='images/pic08.jpg' alt='').w-100
+          .col-lg-7
+            h5 PELLENTESQUE FERMENTUM
+            p Eed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum lorem ipsum blandid sti amet velvelit.
+            a(href='#').text-uppercase more
+    //-End Section 3
+
+    //-Start Section 4
+    section.sec4.text-center
+      .container
+        h2 GET NOTIFIED
+        h3 Lorem ipsum dolor sit amet nullam feugiat tempus
+        .centring-container
+          form.form-inline.justify-content-center
+            input(type='email' placeholder='Your Email').form-control
+            input(type='submit' value='signup').text-uppercase
+    //-End Section 4
+
+    //-Start Footer
+    footer.text-center
+      .container
+        .row
+          .col-lg-3.col-md-6
+            h3 MAGNA
+            ul.list-unstyled
+              each item in ['Aliquam tempus','Ultrecies nul','Gravida ultricies','Commodo etiam']
+                li
+                  a(href='#')=item
+          .col-lg-3.col-md-6
+            h3 FEUGIAT
+            ul.list-unstyled
+              each item in ['Morbi sem lorem','Praes sed dapi','Sed adipis nullam','Fus dolor lacinia']
+                li
+                  a(href='#')=item
+          .col-lg-3.col-md-6
+            h3 TEMPUS
+            ul.list-unstyled
+              each item in ['Donecnec etiam','Aapibus sedun','Namnulla tempus','Morbi set amet']
+                li
+                  a(href='#')=item
+          .col-lg-3.col-md-6
+            h3 ALIQUAM
+            ul.list-unstyled
+              each item in ['Lorem prasent dia','Nellentes ipsum','Diamsed arcu dolor','Sit amet cursus']
+                li
+                  a(href='#')=item
+
+        ul.list-unstyled.info
+          li
+            i.fas.fa-home
+            span 1234 Fictional Street #5432 Nashville, TN 00000-0000
+          li
+            i.fas.fa-phone
+            span (000) 000-0000
+          li
+            i.fas.fa-envelope
+            span mohamedzhran100@gmail.com
+
+        span.rights &copy; MohamedZhran. All rights reserved.
+    //-End Footer
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/main.js')

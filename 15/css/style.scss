@@ -1,0 +1,631 @@
+//import fonts
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap');
+
+// main colors
+$green: #51CCA8;
+$lightBlue: #51B9CC;
+$darkBlue: #5E92CC;
+$darkPurple: #6E81D0;
+$overLay: rgba(30, 39, 49, 0.85);
+
+//Start Mixins
+
+@mixin button($color)
+{
+    background-color: $color;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    &:hover
+    {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@mixin background($overLay,$image)
+{
+    background: linear-gradient(0deg, $overLay, $overLay), url($image);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+*
+{
+    font-family: 'Oxygen', sans-serif;
+    transition: all .1s linear;
+}
+
+// Start NavBar
+
+.navbar
+{
+    border-radius: 0 0 4px 4px;
+    .navbar-brand
+    {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        &:hover
+        {
+            color: #51CCA8;
+        }
+    }
+    .navbar-nav .nav-link
+    {
+        font-weight: bold;
+        color: #a0a0a0;
+        &:hover
+        {
+            color: #FFF;
+        }
+    }
+    .navbar-nav .active > .nav-link
+    {
+        color: #FFF;
+    }
+    .navbar-toggler
+    {
+        color: rgb(255, 255, 255);
+        border-color: rgba(255, 255, 255, 0.59);
+        &:focus
+        {
+            outline: 0;
+        }
+    }
+    @media(max-width: 991px)
+    {
+        .nav-item
+        {
+            transition: all .2s linear;
+            &:hover
+            {
+                padding-left: 10px;
+                margin-right: 10px;
+                background-color: rgba(255, 255, 255, 0.61);
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+// End NavBar
+
+//Start Header
+
+header
+{
+    @include background($overLay, '../images/banner.jpg');
+    padding: 8em 0;
+    color: #FFF;
+
+    h1
+    {
+        line-height: 1.4;
+        font-style: italic;
+        letter-spacing: 2.5px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+
+    hr
+    {
+        width: 100px;
+        background-color: white;
+        height: 1px;
+        margin-bottom: 35px;
+    }
+
+    h3
+    {
+        margin: auto auto 2em;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    a
+    {
+        background-color: transparent;
+        color: #FFF;
+        font-weight: 700;
+        padding: 15px 35px;
+        border: 2px solid #fff;
+        &:hover
+        {
+            color: #FFF;
+            background-color: rgba(255, 255, 255, 0.07);
+            text-decoration: none;
+        }
+    }
+
+    //Start Media Query
+
+    @media (max-width: 576px)
+    {
+        h1
+        {
+            font-size: 1.8em;
+        }
+
+        h3
+        {
+            font-size: 0.9em;
+        }
+    }
+
+    @media (min-width: 768px)
+    {
+        h1
+        {
+            font-size: 2.5em;
+        }
+
+        h3
+        {
+            font-size: 1em;
+        }
+    }
+
+    @media (min-width: 992px)
+    {
+        h1
+        {
+            font-size: 3.5em;
+        }
+
+        h3
+        {
+            font-size: 1em;
+        }
+    }
+
+    @media (min-width: 1200px)
+    {
+        h1
+        {
+            font-size: 3.5em;
+        }
+
+        h3
+        {
+            font-size: 1em;
+        }
+    }
+
+    //End Media Query
+}
+
+//End Header
+
+//Start Common Properties
+.sec1, .sec2, .sec3
+{
+    position: relative;
+    .col-lg-7
+    {
+        h2
+        {
+            color: #fff;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 1.6px;
+        }
+
+        @media(max-width: 991px)
+        {
+            h2
+            {
+                padding: 25px 0;
+                font-size: 1.7em;
+            }
+        }
+
+        @media(min-width: 992px)
+        {
+            h2
+            {
+                margin: 2.8em auto;
+                width: 6.4em;
+                font-size: 3em;
+            }
+        }
+
+        @media(min-width: 1200px)
+        {
+            h2
+            {
+                margin: 2.8em auto;
+                width: 6.4em;
+                font-size: 3.5em;
+            }
+        }
+
+    }
+    .col-lg-5
+    {
+        padding-left: 0;
+        padding-right: 0;
+
+        img
+        {
+            width: 100%;
+            height: 35em;
+        }
+    }
+
+    .text
+    {
+        background-color: #fcfcfc;
+        h2
+        {
+            color: #444;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        p
+        {
+            color: #777;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 991px)
+    {
+        .text
+        {
+            padding: 3em 0;
+        }
+    }
+
+    @media(min-width: 992px)
+    {
+        .text
+        {
+            top: 15%;
+            padding: 3.5%;
+            width: 45%;
+            position: absolute;
+            border-radius: 5px;
+        }
+    }
+
+}
+
+//End Common Properties
+
+//Start Sec 1
+
+.sec1
+{
+    background-color: $green;
+    .text
+    {
+        a
+        {
+            @include button($green)
+        }
+    }
+    @media(min-width: 992px)
+    {
+        .text
+        {
+            right: 11.5%;
+        }
+    }
+}
+
+//End Sec 1
+
+//Start Sec 2
+
+.sec2
+{
+    background-color: $lightBlue;
+    .text
+    {
+        left: 9%;
+        a
+        {
+            @include button($green)
+        }
+    }
+}
+
+//End Sec 2
+
+//Start Sec 3
+
+.sec3
+{
+    background-color: $darkBlue;
+    .text
+    {
+        a
+        {
+            @include button($darkBlue)
+        }
+    }
+    @media(min-width: 992px)
+    {
+        .text
+        {
+            right: 11.5%;
+        }
+    }
+}
+
+//End Sec 3
+
+//Start Slider
+
+.slider
+{
+    background-color: $darkPurple;
+    padding: 6em 0 3em;
+
+    h2
+    {
+        font-size: 3em;
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: .7em;
+        font-style: italic;
+        letter-spacing: 3.5px;
+    }
+
+    hr
+    {
+        width: 4em;
+        height: 3px;
+        background-color: #FFF;
+        margin-bottom: 5em;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon
+    {
+        background-image: none;
+    }
+
+    .carousel-control-next, .carousel-control-prev
+    {
+        top: -27em;
+    }
+
+    @media(min-width: 768px)
+    {
+        .carousel-control-next, .carousel-control-prev
+        {
+            top: -20em;
+        }
+    }
+
+    @media(min-width: 992px)
+    {
+        .carousel-control-next, .carousel-control-prev
+        {
+            top: -15em;
+        }
+    }
+
+    @media(min-width: 1200px)
+    {
+        .carousel-control-next
+        {
+            right: -1em;
+        }
+
+        .carousel-control-prev
+        {
+            left: -1em;
+        }
+    }
+
+    .carousel-item
+    {
+        h3
+        {
+            color: #5f5f5f;
+            font-weight: 300;
+            font-size: 2em;
+            margin: 2em 0 1em;
+        }
+        p
+        {
+            margin: auto auto 2em;
+            color: #787878;
+        }
+        a
+        {
+            @include button($darkPurple);
+            font-size: .8em;
+            margin-bottom: 3em;
+            display: inline-block;
+        }
+
+    }
+
+    .card
+    {
+        border: none;
+    }
+}
+
+//End Slider
+
+//Start Gallery
+
+.gallery
+{
+    padding: 7em 0 3em;
+
+    h2
+    {
+        color: #5d5d5d;
+        font-style: italic;
+        letter-spacing: 4px;
+        font-size: 3em;
+        margin-bottom: .7em;
+    }
+    hr
+    {
+        background-color: #5d5d5d;
+        height: 1px;
+        width: 5em;
+        margin-bottom: 4em;
+    }
+
+    .col-lg-6
+    {
+        margin-bottom: 3em;
+        .card
+        {
+            overflow: hidden;
+            box-shadow: 1px 1px 5px 0 #00000038;
+
+            img:hover
+            {
+                transform: scale(1.05);
+            }
+
+            h5
+            {
+                color: #5d5d5d;
+                letter-spacing: 2px;
+                font-size: 2em;
+                font-weight: 300;
+                margin: 0.8em 0 1em;
+            }
+
+            p
+            {
+                color: #a3a0a0;
+                font-weight: 400;
+                margin-bottom: 2em;
+            }
+            a.image
+            {
+                overflow: hidden;
+            }
+
+            a.gallery-buttons
+            {
+                display: inline-block;
+                margin-bottom: 1em;
+            }
+        }
+    }
+    .row:nth-of-type(1) .col-lg-6:nth-of-type(1) a.gallery-buttons
+    {
+        @include button($green);
+    }
+    .row:nth-of-type(1) .col-lg-6:nth-of-type(2) a.gallery-buttons
+    {
+        @include button($lightBlue);
+    }
+    .row:nth-of-type(2) .col-lg-6:nth-of-type(1) a.gallery-buttons
+    {
+        @include button($darkBlue);
+    }
+    .row:nth-of-type(2) .col-lg-6:nth-of-type(2) a.gallery-buttons
+    {
+        @include button($darkPurple);
+    }
+}
+
+//End Gallery
+
+//Start Contact Us
+
+.contact-us
+{
+    background-color: $green;
+    padding: 7em 0 5em;
+    h2
+    {
+        color: #fff;
+        font-style: italic;
+        letter-spacing: 4px;
+        font-size: 3em;
+        margin-bottom: .7em;
+    }
+    hr
+    {
+        background-color: #fff;
+        height: 2px;
+        width: 5em;
+        margin-bottom: 2em;
+    }
+    p
+    {
+        color: #e8f8f3;
+        font-weight: 400;
+        max-width: 40em;
+        margin: auto auto 2em;
+    }
+    input[type='text']
+    {
+        outline: 0;
+        border: 0;
+        padding: 10px;
+        width: 15em;
+        height: 2.8em;
+    }
+    input[type='submit']
+    {
+        @include button($darkPurple);
+        padding: 8px 25px;
+        border: 0;
+        font-size: 1em;
+    }
+}
+
+//End Contact Us
+
+//Start Footer
+
+footer
+{
+    padding: 4em 0;
+    background-color: #F2F2F2;
+    color: #838383;
+    font-weight: 400;
+    ul
+    {
+        margin-bottom: 2em;
+
+        li
+        {
+            margin-bottom: 1em;
+            display: inline-block;
+            margin-right: 2em;
+            a
+            {
+                color: #838383;
+                &:hover
+                {
+                    text-decoration: none;
+                    color: #838383;
+                }
+            }
+
+            i
+            {
+                color: #000;
+                background-color: #fff;
+                height: 2em;
+                width: 2em;
+                border-radius: 50%;
+                line-height: 2em !important;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+//End Footer

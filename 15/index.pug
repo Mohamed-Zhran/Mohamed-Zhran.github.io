@@ -1,0 +1,212 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // for responsive mode
+    title Cascade
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/all.min.css')
+    link(rel='stylesheet', href='css/style.css')
+    //if lt IE 9
+      script(src='js/html5shiv.min.js')
+      script(src='js/respond.min.js')
+  body
+    //- Start NavBar
+
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-light
+      a.navbar-brand(href='#') Cascade
+        span.d-lg-inline-block.d-none By Mohamed Zhran
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        | &equiv;
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') Generic
+          li.nav-item
+            a.nav-link(href='#') Elements
+
+    //-End NavBar
+
+    //-Start Header
+
+    header.head
+      .container.text-center
+        h1 LOREM #[br.d-lg-inline-block.d-none] IPSUM DOLOR #[br.d-lg-inline-block.d-none] SIT AMET
+        hr
+        h3 Dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue.#[br] Morbi purus sed libero, faucibus adipiscing, commodo.
+        a.text-uppercase(href="#") get started
+
+    //-End Header
+
+    //-Start Section 1
+    section.sec1
+      .container-fluid
+        .row
+          .col-lg-7.col-12.text-lg-left.text-center.order-lg-1.order-2
+            h2 INTEGIS VITAE UNON LIBETUE
+          .col-lg-5.col-12.order-lg-2.order-1
+            img(src="images/pic01.jpg", alt='')
+          .text.order-3.text-center.text-lg-left
+            h2 Morbi purus sed libero #[br.d-lg-inline-block.d-none] faucibus adipiscing
+            p Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed libero, faucibus adipiscing, gravida lorem ipsum.
+            a.text-uppercase(href='#') learn more
+
+
+    //-End Section 1
+
+    //-Start Section 2
+    section.sec2
+      .container-fluid
+        .row
+          .col-lg-7.col-12.text-lg-left.text-center.order-lg-2.order-1
+            h2 LOREM FAUCIBUS ET ALIQUAM
+          .col-lg-5.col-12.order-lg-1.order-2
+            img(src="images/pic02.jpg", alt='')
+          .text.order-3.text-center.text-lg-left
+            h2 Sed etiam adipiscing #[br.d-lg-inline-block.d-none] magna gravida
+            p Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed libero, faucibus adipiscing, gravida lorem ipsum.
+            a.text-uppercase(href='#') learn more
+
+
+    //-End Section 2
+
+    //-Start Section 3
+    section.sec3
+      .container-fluid
+        .row
+          .col-lg-7.col-12.text-lg-left.text-center.order-lg-1.order-2
+            h2 ANTE SED COMMODO LIBERO
+          .col-lg-5.col-12.order-lg-2.order-1
+            img(src="images/pic03.jpg", alt='')
+          .text.order-3.text-center.text-lg-left
+            h2 Libero sed magna et #[br.d-lg-inline-block.d-none] amet commodo
+            p Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed libero, faucibus adipiscing, gravida lorem ipsum.
+            a.text-uppercase(href='#') learn more
+
+
+    //-End Section 3
+
+    //-Start Slider
+    section.slider.text-center
+      .container
+        h2 SED ADIPISCING
+        hr
+        #carouselExampleControls.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              .card
+                img.card-img-top(src='images/pic04.jpg', alt='Card image cap')
+                .card-body
+                  h3.card-title Magna libero faucibus adipiscing
+                  p.card-text
+                    | Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam pede semper est, vitae luctus metus libero #[br.d-lg-inline-block.d-none]
+                    | eu augue. Morbi purus sed libero, faucibus adipiscing, commodo quis, gravida lorem ipsum.
+                  a.text-uppercase(href='#') learn more
+            .carousel-item
+              .card
+                img.card-img-top(src='images/pic05.jpg', alt='Card image cap')
+                .card-body
+                  h3.card-title Feugiat lorem ipsum dolor amet
+                  p.card-text
+                    | Nullam pede semper est vitae luctus metus. Magna lorem ipsum libero eu adipiscing, commodo quis, gravida lorem #[br.d-lg-inline-block.d-none]
+                    | ipsum. Augue morbi purus sed libero, faucibus sed tempus aliquam lorem ipsum dolor amet.
+                  a.text-uppercase(href='#') learn more
+            .carousel-item
+              .card
+                img.card-img-top(src='images/pic06.jpg', alt='Card image cap')
+                .card-body
+                  h3.card-title Aliquam feugiat sed malesuada
+                  p.card-text
+                    | Sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed egestas, ante et vulputate #[br.d-lg-inline-block.d-none]
+                    | lorem ipsum dolor sit amet nullam. Adipiscing sed nullam tempus aliquam veroeros.
+                  a.text-uppercase(href='#') learn more
+          a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+              i.fas.fa-chevron-left.fa-3x
+            span.sr-only Previous
+          a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+              i.fas.fa-chevron-right.fa-3x
+            span.sr-only Next
+    //-End Slider
+
+    //-Start Gallery
+    section.gallery.text-center
+      .container
+        h2 ANTE LIBERO
+        hr
+        .row
+          .col-lg-6
+            .card
+              a.image(href='#')
+                img.card-img-top(src='images/pic07.jpg', alt='Card image cap')
+              .card-body
+                h5.card-title Sed faucibus
+                p.card-text
+                  | Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem ipsum dolor sit amet nullam sed adipiscing.
+                a.gallery-buttons.text-uppercase(href='#') learn more
+          .col-lg-6
+            .card
+              a.image(href='#')
+                img.card-img-top(src='images/pic08.jpg', alt='Card image cap')
+              .card-body
+                h5.card-title Sed faucibus
+                p.card-text
+                  | Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem ipsum dolor sit amet nullam sed adipiscing.
+                a.gallery-buttons.text-uppercase(href='#') learn more
+        .row
+          .col-lg-6
+            .card
+              a.image(href='#')
+                img.card-img-top(src='images/pic09.jpg', alt='Card image cap')
+              .card-body
+                h5.card-title Sed faucibus
+                p.card-text
+                  | Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem ipsum dolor sit amet nullam sed adipiscing.
+                a.gallery-buttons.text-uppercase(href='#') learn more
+          .col-lg-6
+            .card
+              a.image(href='#')
+                img.card-img-top(src='images/pic10.jpg', alt='Card image cap')
+              .card-body
+                h5.card-title Sed faucibus
+                p.card-text
+                  | Sed egestas, ante et vulputate lorem ipsum sed dolor sit amet Morbi purus sed libero, faucibus adipiscing, commodo quis. Lorem ipsum dolor sit amet nullam sed adipiscing.
+                a.gallery-buttons.text-uppercase(href='#') learn more
+
+    //-End Gallery
+
+    //-Start Contact Us
+    section.contact-us.text-center
+      .container
+        h2 TEMPUS AMET
+        hr
+        p Sed egestas, ante et vulputate lorem ipsum dolor sit amet nullam pede semper est, vitae luctus metus libero eu augue. Morbi purus sed libero, faucibus adipiscing, commodo quis, gravida lorem ipsum.
+        form(method='POST',action='#')
+          input.form-control-sm(type='text' placeholder='Your Email Address')
+          input(type='submit' value='SUBSCRIBE')
+    //-End Contact Us
+
+    //-Start Footer
+
+    footer.text-center
+      .container
+        ul.list-unstyled
+          li #[i.fas.fa-map-marker-alt]
+            a(href='#') 3ezbet Mickey :[
+          li  #[i.fas.fa-phone]
+            a(href='#') 0000-000-000
+          li #[i.fas.fa-envelope]
+            a(href='#') mohamedzhran100@gmail.com
+        span &copy; Untitled. All rights reserved.
+
+    //-End Footer
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/main.js')
